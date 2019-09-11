@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
 import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import MainView from "./MainView";
+import "./style.css";
 
 const styles = {
   root: {
@@ -58,12 +58,12 @@ class App extends Component {
     const { valiationError } = this.state;
     return (
       <Container style={styles.root}>
-        <div style={{ backgroundColor: "#ffe4c430" }}>
+        <div className="main-container">
           <h2
             style={{
               textAlign: "center",
               color: "#8181b1",
-              backgroundColor: "cornsilk",
+              backgroundColor: "#bcf76e",
               fontFamily: "fantasy, sans-serif",
               lineHeight: "50px",
               letterSpacing: "5px"
@@ -111,9 +111,9 @@ class App extends Component {
             )}
             <Button
               style={{
-                backgroundColor: "#fff8dc",
+                backgroundColor: "#bcf76e",
                 marginTop: "10px",
-                color: "#b36767"
+                color: "#8181b1"
               }}
               variant="contained"
               onClick={this.handleFormSubmit}
@@ -122,7 +122,9 @@ class App extends Component {
             </Button>
           </form>
           {/* list */}
-          <MainView items={list.items} />
+          <div style={{ display: "block", margin: "0 auto", width: "90%" }}>
+            <MainView items={list.items} />
+          </div>
         </div>
       </Container>
     );
