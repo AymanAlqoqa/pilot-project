@@ -3,7 +3,7 @@ import { observer } from "mobx-react";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
+import PropTypes from "prop-types";
 import "./style.css";
 
 class MainView extends Component {
@@ -81,5 +81,9 @@ class MainView extends Component {
     );
   }
 }
+
+MainView.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default observer(MainView);
