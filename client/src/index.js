@@ -12,7 +12,7 @@ const list = List.create();
 list.fetchList();
 
 onPatch(list, patch => {
-  console.log(patch);
+  console.log(patch); //note: this log should be removed in production
 });
 
 ReactDOM.render(

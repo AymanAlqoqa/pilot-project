@@ -21,7 +21,8 @@ const List = types
       try {
         const json = yield client.service("list").find({
           query: {
-            $limit: 20
+            //we can implement pagination and fetch data using offset, next goal....
+            $limit: 50
           }
         });
         markLoading(false);

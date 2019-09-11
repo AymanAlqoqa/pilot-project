@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import MainView from "./MainView";
+import PropTypes from "prop-types";
 import "./style.css";
 
 const styles = {
@@ -130,5 +131,13 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  list: PropTypes.shape({
+    items: PropTypes.array,
+    isLoading: PropTypes.bool,
+    loadingError: PropTypes.bool
+  })
+};
 
 export default observer(App);
