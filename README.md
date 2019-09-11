@@ -13,4 +13,5 @@ mobx-state-tree https://github.com/mobxjs/mobx-state-tree
 - npm start
 - cd client & npm i
 - npm start
+### *hint: you should have local MySQL server in your system*
 ### Thanks
